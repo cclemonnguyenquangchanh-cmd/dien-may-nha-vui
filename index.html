@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#d71936" />
+  <meta name="description" content="Điện Máy Nhà Vui. Giao diện cửa hàng điện máy dùng cho đồ án học tập." />
+  <title>Trang chủ | Điện Máy Nhà Vui</title>
+  <link rel="icon" href="images/logo/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/banner.css" />
+  <link rel="stylesheet" href="css/category.css" />
+  <link rel="stylesheet" href="css/product.css" />
+  <link rel="stylesheet" href="css/product-detail.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+  <link rel="stylesheet" href="css/flashsale.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+  <script src="js/app.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/product.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/cart-page.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+  <script src="js/countdown.js" defer></script>
+  <script src="js/favorite.js" defer></script>
+  <script src="js/filter.js" defer></script>
+  <script src="js/register.js" defer></script>
+  <script src="js/search.js" defer></script>
+  <script src="js/slider.js" defer></script>
+  <script src="js/account.js" defer></script>
+  <script src="js/support.js" defer></script>
+  <script src="js/admin.js" defer></script>
+</head>
+
+<body data-page="home">
+  <a class="skip-link" href="#main-content">Đến nội dung chính</a>
+  <!-- Đầu trang và chân trang dùng chung được đặt trong js/ui.js. -->
+  <div id="site-header"></div>
+  <main id="main-content" class="page" tabindex="-1">
+    <div class="container">
+      <div class="quick-perks">
+        <span>✓ Hàng chính hãng</span><span>✓ Chính sách minh bạch</span><span>✓ Giao hàng toàn quốc</span><a
+          href="pages/vouchers.html">Lấy voucher mới →</a>
+      </div>
+      <section class="hero-home" aria-label="Ưu đãi và danh mục">
+        <div class="panel home-cats">
+          <b class="home-cats-head">Danh mục sản phẩm</b>
+          <nav data-category-list aria-label="Danh mục sản phẩm"></nav>
+        </div>
+        <div class="main-promo rehero" id="home-banner">
+          <div class="hero-copy">
+            <span class="tag" data-banner-tag>CHÀO MỪNG ĐẾN NHÀ VUI</span>
+            <h1>Công nghệ nâng tầm cuộc sống</h1>
+            <p data-banner-text>Bộ sưu tập công nghệ được yêu thích</p>
+            <a class="btn hero-primary" data-banner-link href="pages/category.html?id=dien-thoai">Khám phá ưu đãi →</a>
+            <div class="hero-controls" aria-label="Chọn banner">
+              <button type="button" aria-label="Banner trước" data-action="hero-prev">
+                ‹</button><button type="button" aria-label="Banner tiếp" data-action="hero-next">
+                ›</button><button aria-label="Banner 1" class="slide-dot active" data-action="hero-slide"
+                data-id="0"></button><button aria-label="Banner 2" class="slide-dot" data-action="hero-slide"
+                data-id="1"></button><button aria-label="Banner 3" class="slide-dot" data-action="hero-slide"
+                data-id="2"></button>
+            </div>
+          </div>
+          <img class="hero-icon" data-banner-picture src="images/banner 1.svg" alt="" width="140" height="170" />
+        </div>
+        <div class="promo-side">
+          <a href="pages/category.html?id=laptop" class="tile">
+            <div>
+              <small>CHO HỌC TẬP & CÔNG VIỆC</small><b>Laptop<br />năng suất</b>
+            </div>
+            <img src="images/right 1.svg" alt="" width="64" height="64" />
+          </a><a href="pages/category.html?id=tivi" class="tile">
+            <div>
+              <small>GIẢI TRÍ TẠI GIA</small><b>Smart TV<br />sống động</b>
+            </div>
+            <img src="images/right 2.svg" alt="" width="64" height="64" />
+          </a>
+        </div>
+      </section>
+    </div>
+    <section class="flash">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">ƯU ĐÃI GIỚI HẠN</span>
+            <h2>⚡ FLASH SALE</h2>
+            <span class="countdown-label">Đồng hồ xem thử <b data-countdown>02:00:00</b></span>
+          </div>
+          <a class="btn btn-light" href="pages/flash-sale.html">Xem tất cả deal →</a>
+        </div>
+        <div class="product-grid" data-products="sale"></div>
+      </div>
+    </section>
+    <div class="container">
+      <section class="section">
+        <div class="section-head">
+          <h2>Khám phá theo danh mục</h2>
+          <a href="pages/categories.html" class="linkred">Tất cả danh mục →</a>
+        </div>
+        <div class="category-cards" data-category-cards></div>
+      </section>
+      <section class="section">
+        <div class="section-head">
+          <h2>Thương hiệu nổi bật</h2>
+          <a href="pages/brands.html" class="linkred">Xem tất cả →</a>
+        </div>
+        <div class="brand-list">
+          <a class="brand-tile" href="pages/brand.html?id=Apple"><img src="images/brand/apple.svg" alt="Apple"
+              width="120" height="38" /><small>Apple</small></a><a class="brand-tile"
+            href="pages/brand.html?id=Samsung"><img src="images/brand/samsung.svg" alt="Samsung" width="120"
+              height="38" /><small>Samsung</small></a><a class="brand-tile" href="pages/brand.html?id=Xiaomi"><img
+              src="images/brand/xiaomi.svg" alt="Xiaomi" width="120" height="38" /><small>Xiaomi</small></a><a
+            class="brand-tile" href="pages/brand.html?id=ASUS"><img src="images/brand/asus.svg" alt="ASUS" width="120"
+              height="38" /><small>ASUS</small></a><a class="brand-tile" href="pages/brand.html?id=LG"><img
+              src="images/brand/lg.svg" alt="LG" width="120" height="38" /><small>LG</small></a>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-head">
+          <h2>📱 Điện thoại được quan tâm</h2>
+          <a href="pages/category.html?id=dien-thoai" class="linkred">Xem tất cả →</a>
+        </div>
+        <div class="product-grid" data-products="phones"></div>
+      </section>
+      <section class="section">
+        <div class="section-head">
+          <h2>💻 Laptop & giải trí</h2>
+          <a href="pages/category.html?id=laptop" class="linkred">Xem thêm →</a>
+        </div>
+        <div class="product-grid" data-products="laptops"></div>
+      </section>
+      <div class="home-join">
+        <div>
+          <b>Nhận ưu đãi mới từ Nhà Vui</b>
+          <p>Cập nhật thông tin sản phẩm và chương trình khuyến mãi.</p>
+        </div>
+        <form id="newsletter-form">
+          <input required type="email" placeholder="Nhập email của bạn" aria-label="Email đăng ký" /><button
+            type="submit" class="btn btn-primary">
+            Đăng ký nhận tin
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <div class="demo-ribbon">
+    BẢN GIAO DIỆN · Đơn hàng được lưu thử trên trình duyệt
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal-host"></div>
+  <noscript>
+    <p class="notice">
+      Bạn cần bật JavaScript để xem sản phẩm và dùng giỏ hàng.
+    </p>
+  </noscript>
+</body>
+
+</html>
