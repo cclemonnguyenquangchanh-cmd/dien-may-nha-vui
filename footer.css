@@ -1,0 +1,103 @@
+/* footer.css: giao diện Điện Máy Nhà Vui. */
+.bottom-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 25px 0;
+}
+.trust-item {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 11px;
+  border: 1px solid #ecedf1;
+}
+.trust-item .glyph {
+  font-size: 23px;
+}
+.trust-item b {
+  display: block;
+  font-size: 12px;
+}
+.trust-item small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+}
+.footer {
+  background: #15171d;
+  color: #fff;
+  padding: 34px 0 22px;
+  margin-top: 36px;
+}
+.footgrid {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(3, 1fr);
+  gap: 34px;
+}
+.footer h3 {
+  font-size: 13px;
+  margin: 0 0 14px;
+}
+.footer p,
+.footer a {
+  font-size: 11px;
+  color: #b8bfcd;
+  display: block;
+  margin-bottom: 9px;
+}
+.copyright {
+  border-top: 1px solid #343743;
+  margin-top: 23px;
+  padding-top: 14px;
+  font-size: 10px;
+  color: #989fab;
+}
+@media (max-width: 1100px) {
+  .footgrid {
+    gap: 15px;
+  }
+}
+@media (max-width: 770px) {
+  .footer {
+    margin-bottom: 62px;
+  }
+
+  .bottom-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .footgrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+@media (max-width: 430px) {
+  .bottom-info {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trust-item {
+    padding: 9px;
+    gap: 6px;
+  }
+
+  .trust-item .glyph {
+    font-size: 16px;
+  }
+
+  .trust-item b {
+    font-size: 10px;
+  }
+
+  .trust-item small {
+    font-size: 8px;
+  }
+
+  .footgrid {
+    gap: 16px;
+  }
+}

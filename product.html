@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d71936" />
+    <meta
+      name="description"
+      content="Điện Máy Nhà Vui. Giao diện cửa hàng điện máy dùng cho đồ án học tập."
+    />
+    <title>Chi tiết sản phẩm | Điện Máy Nhà Vui</title>
+    <link rel="icon" href="../images/logo/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/banner.css" />
+    <link rel="stylesheet" href="../css/category.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="stylesheet" href="../css/product-detail.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="stylesheet" href="../css/flashsale.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <script src="../js/app.js" defer></script>
+    <script src="../js/ui.js" defer></script>
+    <script src="../js/product.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/cart-page.js" defer></script>
+    <script src="../js/checkout.js" defer></script>
+    <script src="../js/countdown.js" defer></script>
+    <script src="../js/favorite.js" defer></script>
+    <script src="../js/filter.js" defer></script>
+    <script src="../js/register.js" defer></script>
+    <script src="../js/search.js" defer></script>
+    <script src="../js/slider.js" defer></script>
+    <script src="../js/account.js" defer></script>
+    <script src="../js/support.js" defer></script>
+    <script src="../js/admin.js" defer></script>
+  </head>
+  <body data-page="product">
+    <a class="skip-link" href="#main-content">Đến nội dung chính</a>
+    <!-- Đầu trang và chân trang dùng chung được đặt trong js/ui.js. -->
+    <div id="site-header"></div>
+    <main id="main-content" class="page" tabindex="-1">
+      <div id="product-missing" hidden></div>
+      <div class="container page" id="product-content">
+        <div id="product-breadcrumb"></div>
+        <div class="detail-layout">
+          <section class="panel detail-gallery" aria-label="Ảnh sản phẩm">
+            <div class="bigpic" id="product-picture"></div>
+            <p class="muted mini center">Hình sản phẩm minh họa cho đồ án.</p>
+          </section>
+          <section class="panel detail-main">
+            <div class="eyebrow">THÔNG TIN SẢN PHẨM</div>
+            <h1 data-product-name></h1>
+            <div class="rating">
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span id="product-rating"></span>
+            </div>
+            <div class="detail-price">
+              <div class="price" id="product-price"></div>
+              <div>
+                <span class="oldprice" id="product-old-price"></span>
+                <span class="badge red" id="product-discount"></span>
+              </div>
+              <p class="mini muted">Giá và thông số là dữ liệu mẫu.</p>
+            </div>
+            <p class="stock" id="product-stock"></p>
+            <div class="detail-options">
+              <h2>Phiên bản</h2>
+              <div class="option-row" id="product-variants"></div>
+              <p class="mini muted">
+                Chọn phiên bản để xem thử giao diện; giỏ mẫu quản lý số lượng
+                theo sản phẩm.
+              </p>
+            </div>
+            <div class="notice yellow">
+              Quà tặng và ưu đãi được xác nhận khi xử lý đơn hàng.
+            </div>
+            <div class="actions-two">
+              <button class="btn btn-primary" data-action="buy">MUA NGAY</button
+              ><button class="btn btn-outline" data-action="add">
+                THÊM VÀO GIỎ
+              </button>
+            </div>
+            <div class="actionbar detail-extra">
+              <button
+                class="btn btn-light"
+                data-action="compare-toggle"
+                id="product-compare"
+              >
+                So sánh sản phẩm</button
+              ><a class="btn btn-light" id="product-reviews-link"
+                >Xem đánh giá</a
+              >
+            </div>
+            <button
+              class="btn btn-light btn-block"
+              data-action="fav"
+              id="product-favorite"
+            >
+              Lưu sản phẩm yêu thích
+            </button>
+          </section>
+          <aside class="panel detail-aside">
+            <h2>Yên tâm mua sắm</h2>
+            <div class="aside-benefit">
+              🚚 Giao tận nơi hoặc nhận tại cửa hàng
+            </div>
+            <div class="aside-benefit">🛡 Bảo hành theo chính sách</div>
+            <div class="aside-benefit">✓ Xác nhận đơn trước khi xử lý</div>
+            <a href="support.html" class="linkred">Xem chính sách →</a>
+          </aside>
+        </div>
+        <div class="tabs" aria-label="Thông tin chi tiết">
+          <button class="tab active" data-action="detail-tab" data-id="spec">
+            Thông số kỹ thuật</button
+          ><button class="tab" data-action="detail-tab" data-id="desc">
+            Mô tả sản phẩm</button
+          ><button class="tab" data-action="detail-tab" data-id="review">
+            Đánh giá
+          </button>
+        </div>
+        <section
+          class="panel pad section"
+          id="product-tab-content"
+          aria-live="polite"
+        ></section>
+        <section class="section">
+          <div class="section-head"><h2>Sản phẩm liên quan</h2></div>
+          <div class="product-grid" id="related-products"></div>
+        </section>
+      </div>
+    </main>
+    <div id="site-footer"></div>
+    <div class="demo-ribbon">
+      BẢN GIAO DIỆN · Đơn hàng được lưu thử trên trình duyệt
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="modal-host"></div>
+    <noscript
+      ><p class="notice">
+        Bạn cần bật JavaScript để xem sản phẩm và dùng giỏ hàng.
+      </p></noscript
+    >
+  </body>
+</html>

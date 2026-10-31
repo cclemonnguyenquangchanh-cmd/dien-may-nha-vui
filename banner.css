@@ -1,0 +1,317 @@
+/* banner.css: giao diện Điện Máy Nhà Vui. */
+.category-arrow {
+  margin-left: auto;
+}
+.hero-icon {
+  width: 140px;
+  height: 170px;
+  object-fit: contain;
+}
+@media (max-width: 770px) {
+  .hero-icon {
+    width: 90px;
+    height: 110px;
+  }
+}
+.hero-home {
+  display: grid;
+  grid-template-columns: 215px 1fr 230px;
+  gap: 15px;
+  padding-top: 20px;
+}
+.home-cats {
+  padding: 10px;
+}
+.home-cats a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #394254;
+}
+.home-cats a:hover {
+  background: #fff0f3;
+  color: var(--red);
+}
+.main-promo {
+  border-radius: 15px;
+  background: linear-gradient(115deg, #e00028 0%, #f0372d 60%, #ffbc63 100%);
+  padding: 25px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 330px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+}
+.main-promo:after {
+  content: "";
+  width: 390px;
+  height: 390px;
+  position: absolute;
+  right: -70px;
+  bottom: -205px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+}
+.main-promo .tag {
+  background: #ffdd68;
+  border-radius: 30px;
+  color: #971500;
+  padding: 7px 13px;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 10px;
+}
+.main-promo h1 {
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin: 15px 0;
+}
+.main-promo p {
+  font-size: 12px;
+  max-width: 270px;
+}
+.main-promo .mockprod {
+  font-size: 124px;
+  z-index: 2;
+  text-shadow: 0 15px 12px rgba(0, 0, 0, 0.13);
+}
+.promo-side {
+  display: grid;
+  gap: 15px;
+}
+.promo-side .tile {
+  background: #fff;
+  border-radius: 13px;
+  padding: 23px 16px;
+  min-height: 150px;
+  border: 1px solid #edf0f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.tile b {
+  font-size: 16px;
+  display: block;
+}
+.tile small {
+  color: var(--red);
+  font-weight: 700;
+  font-size: 10px;
+}
+.tile .em {
+  font-size: 58px;
+}
+@media (max-width: 1100px) {
+  .hero-home {
+    grid-template-columns: 190px 1fr;
+  }
+
+  .promo-side {
+    display: none;
+  }
+}
+@media (max-width: 770px) {
+  .hero-home {
+    grid-template-columns: 1fr;
+  }
+
+  .home-cats {
+    display: none;
+  }
+
+  .main-promo {
+    min-height: 255px;
+    padding: 20px;
+  }
+
+  .main-promo h1 {
+    font-size: 28px;
+  }
+
+  .main-promo .mockprod {
+    font-size: 82px;
+  }
+}
+.quick-perks {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0;
+  color: #47617e;
+  font-size: 11px;
+  font-weight: 600;
+}
+.quick-perks a {
+  color: var(--red);
+}
+.hero-home {
+  gap: 16px;
+}
+.home-cats {
+  padding: 10px;
+}
+.home-cats-head {
+  display: block;
+  padding: 12px 10px;
+  color: var(--red);
+  font-size: 12px;
+}
+.main-promo.rehero {
+  background:
+    radial-gradient(circle at 75% 22%, #ff9a9d 0, transparent 45%),
+    linear-gradient(115deg, #b5092c, #e72f4d);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.rehero h1 {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1.3;
+  max-width: 420px;
+}
+.hero-copy {
+  z-index: 2;
+  position: relative;
+}
+.hero-icon {
+  font-size: 120px;
+  filter: drop-shadow(0 10px 8px #5d162944);
+  position: absolute;
+  right: 6%;
+  top: 20%;
+}
+.hero-primary {
+  margin-top: 14px;
+  background: white;
+  color: var(--red);
+}
+.hero-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+.hero-controls button {
+  width: 27px;
+  height: 27px;
+  background: #ffffff3b;
+  border: 1px solid #ffffff5c;
+  border-radius: 50%;
+  color: white;
+}
+.hero-controls .slide-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  padding: 0;
+  background: #ffffff72;
+}
+.hero-controls .slide-dot.active {
+  background: white;
+  width: 20px;
+  border-radius: 10px;
+}
+.home-join {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: linear-gradient(90deg, #182b4c, #314d72);
+  color: white;
+  padding: 26px 30px;
+  border-radius: 17px;
+  margin: 32px 0;
+}
+.home-join b {
+  font-size: 20px;
+}
+.home-join p {
+  font-size: 12px;
+  color: #c8d4e4;
+}
+.home-join form {
+  display: flex;
+  gap: 8px;
+}
+.home-join input {
+  border-radius: 10px;
+  padding: 13px 14px;
+  width: 225px;
+  border: 1px solid #fff3;
+}
+.page-hero-glyph {
+  font-size: 95px;
+  line-height: 1;
+  color: #c5d5ff55;
+}
+@media (max-width: 770px) {
+  .quick-perks {
+    gap: 8px;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+
+  .quick-perks span:nth-child(2),
+  .quick-perks span:nth-child(3) {
+    display: none;
+  }
+
+  .home-cats {
+    display: none;
+  }
+
+  .hero-home {
+    display: block;
+  }
+
+  .rehero {
+    min-height: 270px;
+  }
+
+  .rehero h1 {
+    font-size: 26px;
+  }
+
+  .hero-icon {
+    right: 1%;
+    font-size: 70px;
+    opacity: 0.24;
+  }
+
+  .home-join {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 22px;
+  }
+
+  .home-join form {
+    width: 100%;
+  }
+
+  .home-join input {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .page-hero-glyph {
+    font-size: 50px;
+  }
+}
+@media (max-width: 430px) {
+  .page-hero-glyph {
+    display: none;
+  }
+
+  .home-join form {
+    flex-direction: column;
+  }
+}

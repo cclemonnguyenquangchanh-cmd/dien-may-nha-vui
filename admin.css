@@ -1,0 +1,335 @@
+/* admin.css: giao diện Điện Máy Nhà Vui. */
+.admin-page {
+  background: #f4f6fa;
+  min-height: 100vh;
+}
+.admin-shell {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1fr);
+  min-height: 100vh;
+}
+.admin-sidebar {
+  background: #161b2a;
+  color: #fff;
+  padding: 20px 13px;
+}
+.admin-sidebar .brand {
+  padding: 8px 12px 28px;
+}
+.admin-sidebar .brand-logo {
+  width: 37px;
+  height: 37px;
+}
+.admin-sidebar .brand-name {
+  font-size: 15px;
+}
+.admin-nav-label {
+  color: #758093;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 20px 14px 9px;
+}
+.admin-nav a {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border-radius: 9px;
+  margin-bottom: 4px;
+  color: #c6cbd6;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.admin-nav a.active,
+.admin-nav a:hover {
+  background: #303a50;
+  color: #fff;
+}
+.admin-main {
+  padding: 25px 30px;
+}
+.admin-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 27px;
+}
+.admin-top h1 {
+  margin: 0;
+}
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.admin-columns {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+.admin-card {
+  padding: 21px;
+}
+.bars {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  height: 215px;
+  padding: 19px 0 0;
+  border-bottom: 1px solid #eceff3;
+}
+.bar {
+  flex: 1;
+  min-width: 18px;
+  background: linear-gradient(180deg, #fa6979, #d70018);
+  border-radius: 7px 7px 0 0;
+  position: relative;
+}
+.bar span {
+  position: absolute;
+  bottom: -23px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  color: #929aa5;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+.admin-table th {
+  text-align: left;
+  color: #87909c;
+  font-weight: 700;
+  background: #f7f8fa;
+}
+.admin-table td,
+.admin-table th {
+  padding: 13px 10px;
+  border-bottom: 1px solid #edf0f3;
+}
+.admin-table td b {
+  display: block;
+}
+@media (max-width: 1100px) {
+  .admin-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 770px) {
+  .detail-layout,
+  .two-col,
+  .account-layout,
+  .faq-grid,
+  .auth-container,
+  .admin-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    padding: 9px 12px;
+  }
+
+  .admin-sidebar .brand {
+    padding: 6px 5px;
+  }
+
+  .admin-nav-label {
+    display: none;
+  }
+
+  .admin-nav {
+    display: flex;
+    gap: 6px;
+    overflow: auto;
+  }
+
+  .admin-nav a {
+    white-space: nowrap;
+    padding: 9px;
+  }
+
+  .admin-main {
+    padding: 17px 14px;
+  }
+
+  .admin-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-top {
+    align-items: flex-start;
+  }
+}
+.address-card,
+.notice-card,
+.ticket-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 18px 4px;
+}
+.address-card p,
+.notice-card p,
+.ticket-row p {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 6px 0;
+}
+.admin-sidebar {
+  background: #16243c;
+}
+.admin-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 28px 19px 21px;
+  color: white;
+}
+.admin-logo b {
+  font-size: 22px;
+}
+.admin-logo small {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #abbbd0;
+}
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.admin-nav a {
+  border-radius: 10px;
+  padding: 13px 14px;
+  color: #d5dfef;
+  font-weight: 600;
+}
+.admin-nav a.active,
+.admin-nav a:hover {
+  background: #d71936;
+  color: white;
+}
+.admin-nav-note {
+  margin: 26px 17px;
+  color: #b9c6d8;
+  font-size: 11px;
+  line-height: 1.7;
+}
+.admin-breadcrumb {
+  color: #8491a6;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+.admin-ops {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.admin-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.admin-intro span {
+  color: var(--red);
+  background: #fff1f4;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.admin-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+.admin-toolbar input {
+  min-width: 260px;
+  flex: 1;
+  padding: 13px 15px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.admin-toolbar select {
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.admin-kpi-list {
+  margin: 12px 0;
+}
+.admin-kpi-list > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+}
+.admin-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.admin-category-grid > a {
+  padding: 22px;
+}
+.admin-category-grid span {
+  font-size: 34px;
+}
+.admin-category-grid a b {
+  color: var(--red);
+}
+.admin-category-grid p {
+  color: var(--muted);
+  font-size: 11px;
+}
+.admin-table select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  max-width: 140px;
+}
+@media (max-width: 1100px) {
+  .admin-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 770px) {
+  .admin-intro {
+    display: block;
+  }
+
+  .admin-intro span {
+    display: inline-block;
+    margin-top: 7px;
+  }
+
+  .admin-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .admin-toolbar input {
+    min-width: 0;
+  }
+
+  .admin-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

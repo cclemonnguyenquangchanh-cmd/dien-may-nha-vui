@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d71936" />
+    <meta
+      name="description"
+      content="Điện Máy Nhà Vui. Giao diện cửa hàng điện máy dùng cho đồ án học tập."
+    />
+    <title>Đăng ký | Điện Máy Nhà Vui</title>
+    <link rel="icon" href="../images/logo/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/banner.css" />
+    <link rel="stylesheet" href="../css/category.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="stylesheet" href="../css/product-detail.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="stylesheet" href="../css/flashsale.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <script src="../js/app.js" defer></script>
+    <script src="../js/ui.js" defer></script>
+    <script src="../js/product.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/cart-page.js" defer></script>
+    <script src="../js/checkout.js" defer></script>
+    <script src="../js/countdown.js" defer></script>
+    <script src="../js/favorite.js" defer></script>
+    <script src="../js/filter.js" defer></script>
+    <script src="../js/register.js" defer></script>
+    <script src="../js/search.js" defer></script>
+    <script src="../js/slider.js" defer></script>
+    <script src="../js/account.js" defer></script>
+    <script src="../js/support.js" defer></script>
+    <script src="../js/admin.js" defer></script>
+  </head>
+  <body data-page="register">
+    <a class="skip-link" href="#main-content">Đến nội dung chính</a>
+    <!-- Đầu trang và chân trang dùng chung được đặt trong js/ui.js. -->
+    <div id="site-header"></div>
+    <main id="main-content" class="page" tabindex="-1">
+      <div class="container page">
+        <nav class="breadcrumb" aria-label="Đường dẫn">
+          <a href="../index.html">Trang chủ</a><span>›</span><b>Đăng ký</b>
+        </nav>
+        <div class="auth-container panel">
+          <aside class="auth-art">
+            <span class="overline">THÀNH VIÊN NHÀ VUI</span>
+            <h2>Mua sắm dễ dàng.<br />Ưu đãi trọn vẹn.</h2>
+            <p>
+              Theo dõi đơn hàng, quản lý thông tin và lưu sản phẩm yêu thích.
+            </p>
+            <div class="auth-emoji" aria-hidden="true">🎁</div>
+          </aside>
+          <section class="auth-form">
+            <h1>Tạo tài khoản</h1>
+            <p class="muted">Điền thông tin để xem thử giao diện tài khoản.</p>
+            <form id="auth-form">
+              <div class="input-group">
+                <label for="member-name">Họ và tên</label
+                ><input
+                  id="member-name"
+                  name="name"
+                  required
+                  autocomplete="name"
+                  placeholder="Nhập họ tên"
+                />
+              </div>
+              <div class="input-group">
+                <label for="member-login">Số điện thoại hoặc email</label
+                ><input
+                  id="member-login"
+                  name="login"
+                  required
+                  autocomplete="username"
+                  placeholder="Nhập thông tin đăng nhập"
+                />
+              </div>
+              <div class="input-group">
+                <label for="member-password">Mật khẩu xem thử</label
+                ><input
+                  id="member-password"
+                  name="password"
+                  type="password"
+                  required
+                  minlength="6"
+                  autocomplete="off"
+                  placeholder="Tối thiểu 6 ký tự, dùng mật khẩu giả"
+                />
+              </div>
+              <label class="checkitem"
+                ><input type="checkbox" required /> Tôi đã đọc ghi chú về bản
+                giao diện thử.</label
+              >
+              <button class="btn btn-primary btn-block" type="submit">
+                ĐĂNG KÝ THỬ
+              </button>
+            </form>
+            <div class="divider-text">hoặc</div>
+            <a class="btn btn-light btn-block" href="track.html"
+              >Tra cứu đơn không cần tài khoản</a
+            >
+            <p class="auth-switch">
+              Đã có tài khoản?
+              <a class="linkred" href="login.html">Đăng nhập</a>
+            </p>
+            <p class="muted mini">
+              Chưa có xác thực máy chủ. Mật khẩu không được lưu; hãy dùng thông
+              tin giả để thử.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+    <div id="site-footer"></div>
+    <div class="demo-ribbon">
+      BẢN GIAO DIỆN · Đơn hàng được lưu thử trên trình duyệt
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="modal-host"></div>
+    <noscript
+      ><p class="notice">
+        Bạn cần bật JavaScript để xem sản phẩm và dùng giỏ hàng.
+      </p></noscript
+    >
+  </body>
+</html>

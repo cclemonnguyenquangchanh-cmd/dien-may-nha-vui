@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d71936" />
+    <meta
+      name="description"
+      content="Điện Máy Nhà Vui. Giao diện cửa hàng điện máy dùng cho đồ án học tập."
+    />
+    <title>Thanh toán | Điện Máy Nhà Vui</title>
+    <link rel="icon" href="../images/logo/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/banner.css" />
+    <link rel="stylesheet" href="../css/category.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="stylesheet" href="../css/product-detail.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="stylesheet" href="../css/flashsale.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <script src="../js/app.js" defer></script>
+    <script src="../js/ui.js" defer></script>
+    <script src="../js/product.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/cart-page.js" defer></script>
+    <script src="../js/checkout.js" defer></script>
+    <script src="../js/countdown.js" defer></script>
+    <script src="../js/favorite.js" defer></script>
+    <script src="../js/filter.js" defer></script>
+    <script src="../js/register.js" defer></script>
+    <script src="../js/search.js" defer></script>
+    <script src="../js/slider.js" defer></script>
+    <script src="../js/account.js" defer></script>
+    <script src="../js/support.js" defer></script>
+    <script src="../js/admin.js" defer></script>
+  </head>
+  <body data-page="checkout">
+    <a class="skip-link" href="#main-content">Đến nội dung chính</a>
+    <!-- Đầu trang và chân trang dùng chung được đặt trong js/ui.js. -->
+    <div id="site-header"></div>
+    <main id="main-content" class="page" tabindex="-1">
+      <div class="container page">
+        <nav class="breadcrumb" aria-label="Đường dẫn">
+          <a href="../index.html">Trang chủ</a><span>›</span
+          ><a href="cart.html">Giỏ hàng</a><span>›</span><b>Thanh toán</b>
+        </nav>
+        <h1>Thanh toán đơn hàng</h1>
+        <div class="panel empty" id="checkout-empty">
+          <h2>Chưa có sản phẩm để thanh toán</h2>
+          <p>Hãy thêm sản phẩm vào giỏ trước khi tiếp tục.</p>
+          <a class="btn btn-primary" href="../index.html">Chọn sản phẩm</a>
+        </div>
+        <div class="two-col" id="checkout-content" hidden>
+          <form id="checkout-form">
+            <section class="panel checkout-step">
+              <h2><span class="step-num">1</span> Thông tin người nhận</h2>
+              <div class="fieldgrid">
+                <div class="input-group">
+                  <label for="receiver-name">Họ và tên *</label
+                  ><input
+                    id="receiver-name"
+                    name="name"
+                    required
+                    autocomplete="name"
+                    placeholder="Nhập họ tên"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="receiver-phone">Số điện thoại *</label
+                  ><input
+                    id="receiver-phone"
+                    name="phone"
+                    required
+                    type="tel"
+                    pattern="[0-9]{9,11}"
+                    autocomplete="tel"
+                    placeholder="09xxxxxxxx"
+                  />
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="receiver-email">Email (tùy chọn)</label
+                ><input
+                  id="receiver-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="email@example.com"
+                />
+              </div>
+            </section>
+            <section class="panel checkout-step">
+              <h2><span class="step-num">2</span> Phương thức nhận hàng</h2>
+              <label class="radio-card"
+                ><input
+                  type="radio"
+                  name="ship"
+                  value="delivery"
+                  checked
+                /><span
+                  ><b>Giao hàng tận nơi</b
+                  ><span class="radio-description"
+                    >Phí giao hàng sẽ được xác nhận theo địa chỉ.</span
+                  ></span
+                ></label
+              ><label class="radio-card"
+                ><input type="radio" name="ship" value="pickup" /><span
+                  ><b>Nhận tại cửa hàng</b
+                  ><span class="radio-description"
+                    >Nhân viên liên hệ trước khi bạn đến nhận.</span
+                  ></span
+                ></label
+              >
+              <div class="input-group">
+                <label for="receiver-address"
+                  >Địa chỉ liên hệ / nhận hàng *</label
+                ><input
+                  id="receiver-address"
+                  name="address"
+                  required
+                  autocomplete="street-address"
+                  placeholder="Số nhà, đường, phường/xã, tỉnh/thành"
+                />
+              </div>
+              <div class="input-group">
+                <label for="order-note">Ghi chú đơn hàng</label
+                ><textarea
+                  id="order-note"
+                  name="note"
+                  rows="2"
+                  placeholder="Ví dụ: liên hệ trước khi giao hàng"
+                ></textarea>
+              </div>
+            </section>
+            <section class="panel checkout-step">
+              <h2><span class="step-num">3</span> Phương thức thanh toán</h2>
+              <label class="radio-card"
+                ><input type="radio" name="payment" value="cod" checked /><span
+                  ><b>Thanh toán khi nhận hàng (COD)</b
+                  ><span class="radio-description"
+                    >Thanh toán sau khi giao nhận.</span
+                  ></span
+                ></label
+              ><label class="radio-card"
+                ><input type="radio" name="payment" value="transfer" /><span
+                  ><b>Chuyển khoản ngân hàng</b
+                  ><span class="radio-description"
+                    >Hướng dẫn được cung cấp sau khi xác nhận đơn.</span
+                  ></span
+                ></label
+              >
+            </section>
+          </form>
+          <aside id="checkout-summary" aria-label="Tóm tắt đơn hàng"></aside>
+        </div>
+      </div>
+    </main>
+    <div id="site-footer"></div>
+    <div class="demo-ribbon">
+      BẢN GIAO DIỆN · Đơn hàng được lưu thử trên trình duyệt
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="modal-host"></div>
+    <noscript
+      ><p class="notice">
+        Bạn cần bật JavaScript để xem sản phẩm và dùng giỏ hàng.
+      </p></noscript
+    >
+  </body>
+</html>

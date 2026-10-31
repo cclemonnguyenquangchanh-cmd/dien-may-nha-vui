@@ -1,0 +1,78 @@
+/* flashsale.css: giao diện Điện Máy Nhà Vui. */
+.countdown-label {
+  display: inline-flex;
+  gap: 10px;
+  color: white;
+  align-items: center;
+  font-size: 11px;
+  margin-top: 8px;
+}
+[data-countdown] {
+  padding: 4px 8px;
+  border: 1px solid #ffffff60;
+  border-radius: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.flash {
+  background: var(--red);
+  padding: 23px 0 26px;
+  margin: 24px 0 30px;
+}
+.flash .section-head h2 {
+  color: #fff;
+}
+.flash .product-card {
+  border: 0;
+}
+.flash .product-card .imgbox {
+  height: 145px;
+}
+.flash .product-card .product-info {
+  padding: 10px 12px 13px;
+}
+.flash .price {
+  font-size: 14px;
+}
+.flash .card-footer .btn-outline {
+  display: none;
+}
+.flash .card-footer {
+  grid-template-columns: 1fr;
+}
+@media (max-width: 770px) {
+  .flash .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flash .product-card:nth-child(n + 5) {
+    display: none;
+  }
+}
+.flash {
+  background: linear-gradient(115deg, #d31434, #a70826);
+}
+.flash .product-card {
+  background: white;
+}
+.deal-banner {
+  background: linear-gradient(120deg, #d71936, #ff6180);
+  color: #fff;
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.deal-banner h2 {
+  color: white;
+  margin: 8px 0;
+}
+.deal-banner b {
+  font-size: 65px;
+}
+@media (max-width: 430px) {
+  .deal-banner b {
+    font-size: 35px;
+  }
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d71936" />
+    <meta
+      name="description"
+      content="Điện Máy Nhà Vui. Giao diện cửa hàng điện máy dùng cho đồ án học tập."
+    />
+    <title>Giỏ hàng | Điện Máy Nhà Vui</title>
+    <link rel="icon" href="../images/logo/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/banner.css" />
+    <link rel="stylesheet" href="../css/category.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="stylesheet" href="../css/product-detail.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="stylesheet" href="../css/flashsale.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <script src="../js/app.js" defer></script>
+    <script src="../js/ui.js" defer></script>
+    <script src="../js/product.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/cart-page.js" defer></script>
+    <script src="../js/checkout.js" defer></script>
+    <script src="../js/countdown.js" defer></script>
+    <script src="../js/favorite.js" defer></script>
+    <script src="../js/filter.js" defer></script>
+    <script src="../js/register.js" defer></script>
+    <script src="../js/search.js" defer></script>
+    <script src="../js/slider.js" defer></script>
+    <script src="../js/account.js" defer></script>
+    <script src="../js/support.js" defer></script>
+    <script src="../js/admin.js" defer></script>
+  </head>
+  <body data-page="cart">
+    <a class="skip-link" href="#main-content">Đến nội dung chính</a>
+    <!-- Đầu trang và chân trang dùng chung được đặt trong js/ui.js. -->
+    <div id="site-header"></div>
+    <main id="main-content" class="page" tabindex="-1">
+      <div class="container page">
+        <nav class="breadcrumb" aria-label="Đường dẫn">
+          <a href="../index.html">Trang chủ</a><span>›</span><b>Giỏ hàng</b>
+        </nav>
+        <h1>
+          Giỏ hàng của bạn
+          <span class="count-label" id="cart-count">0 sản phẩm</span>
+        </h1>
+        <div class="panel empty" id="cart-empty">
+          <span class="emoji">🛒</span>
+          <h2>Giỏ hàng đang trống</h2>
+          <p>Chọn sản phẩm để bắt đầu mua sắm.</p>
+          <a class="btn btn-primary" href="../index.html">Tiếp tục mua sắm</a>
+        </div>
+        <div class="two-col" id="cart-content" hidden>
+          <section class="panel" aria-label="Sản phẩm trong giỏ">
+            <div id="cart-items"></div>
+            <div class="cart-bottom">
+              <a class="btn btn-light" href="../index.html"
+                >← Tiếp tục mua sắm</a
+              ><button class="btn btn-outline" data-action="clear-cart">
+                Xóa giỏ hàng
+              </button>
+            </div>
+          </section>
+          <aside class="panel summary">
+            <h2>Tóm tắt đơn hàng</h2>
+            <div class="sum-row">
+              <span>Tạm tính</span><b data-cart-total>0đ</b>
+            </div>
+            <div class="sum-row">
+              <span>Phí giao hàng</span><span>Tính khi xác nhận</span>
+            </div>
+            <div class="sum-row total">
+              <b>Tổng tạm tính</b><b data-cart-total>0đ</b>
+            </div>
+            <p class="muted mini">
+              Bạn có thể nhập mã giảm giá ở bước thanh toán.
+            </p>
+            <a class="btn btn-primary btn-block" href="checkout.html"
+              >Tiếp tục thanh toán →</a
+            ><a class="btn btn-light btn-block" href="track.html"
+              >Tra cứu đơn hàng</a
+            >
+          </aside>
+        </div>
+      </div>
+      <!-- Mỗi sản phẩm trong giỏ sử dụng lại mẫu HTML này. -->
+      <template id="cart-item-template"
+        ><article class="cartline">
+          <a class="cartpic" data-product-link data-picture></a>
+          <div>
+            <a data-product-link
+              ><h2 class="cart-product-name" data-name></h2
+            ></a>
+            <p class="muted mini" data-brand></p>
+            <strong class="linkred" data-price></strong>
+            <div class="qty">
+              <button
+                data-action="qty"
+                data-step="-1"
+                aria-label="Giảm số lượng"
+              >
+                −</button
+              ><strong data-quantity></strong
+              ><button
+                data-action="qty"
+                data-step="1"
+                aria-label="Tăng số lượng"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="right">
+            <b class="cart-line-total" data-line-total></b
+            ><button class="btn btn-light btn-sm" data-action="remove">
+              Xóa
+            </button>
+          </div>
+        </article></template
+      >
+    </main>
+    <div id="site-footer"></div>
+    <div class="demo-ribbon">
+      BẢN GIAO DIỆN · Đơn hàng được lưu thử trên trình duyệt
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="modal-host"></div>
+    <noscript
+      ><p class="notice">
+        Bạn cần bật JavaScript để xem sản phẩm và dùng giỏ hàng.
+      </p></noscript
+    >
+  </body>
+</html>

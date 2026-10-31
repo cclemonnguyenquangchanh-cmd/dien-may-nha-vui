@@ -1,0 +1,228 @@
+/* product.css: giao diện Điện Máy Nhà Vui. */
+.price {
+  font-weight: 800;
+  color: var(--red);
+  font-size: 20px;
+  letter-spacing: -0.3px;
+}
+.oldprice {
+  font-size: 11px;
+  color: #949aa6;
+  text-decoration: line-through;
+}
+.rating {
+  font-size: 11px;
+  color: #f4a600;
+  letter-spacing: 1px;
+}
+.stars {
+  color: #f9ab17;
+}
+.imgbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.imgbox svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+.imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+.product-card {
+  min-width: 0;
+  border: 1px solid #eef0f4;
+  background: #fff;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.product-card:hover {
+  box-shadow: 0 10px 30px rgba(32, 38, 56, 0.12);
+  transform: translateY(-3px);
+}
+.product-card .imgbox {
+  height: 176px;
+  padding: 15px 20px 0;
+  cursor: pointer;
+}
+.product-info {
+  padding: 11px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.product-title {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.55;
+  min-height: 37px;
+  color: #222a38;
+}
+.product-title:hover {
+  color: var(--red);
+}
+.product-card .price {
+  font-size: 16px;
+}
+.product-card .oldprice {
+  margin-left: 4px;
+}
+.product-card .badge-discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--red);
+  font-size: 10px;
+  font-weight: 800;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+.heart {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #edf0f4;
+  border-radius: 50%;
+  background: #fff;
+  color: #a7a9b1;
+  display: grid;
+  place-items: center;
+}
+.heart.active {
+  color: var(--red);
+}
+.card-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 14px;
+}
+.card-footer .btn {
+  font-size: 10px;
+  padding: 9px 4px;
+}
+.stock {
+  font-size: 10px;
+  color: var(--green);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+}
+.order-body .imgbox {
+  height: 70px;
+  width: 75px;
+  background: #f7f8fb;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.order-body .imgbox svg {
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 1100px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 770px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .product-card .imgbox {
+    height: 150px;
+    padding: 10px;
+  }
+
+  .product-card .product-info {
+    padding: 10px;
+  }
+
+  .product-card .price {
+    font-size: 14px;
+  }
+
+  .product-card .oldprice {
+    display: block;
+  }
+
+  .product-card .card-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card .card-footer .btn-outline {
+    display: none;
+  }
+}
+@media (max-width: 430px) {
+  .product-card .imgbox {
+    height: 132px;
+  }
+
+  .product-title {
+    font-size: 11px;
+  }
+
+  .product-card .price {
+    font-size: 13px;
+  }
+
+  .card-footer .btn {
+    font-size: 9px;
+  }
+}
+.product-card {
+  overflow: hidden;
+}
+.product-card .imgbox {
+  background: linear-gradient(145deg, #f7f9fc, #eef3f8);
+}
+.price-block {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin: 6px 0;
+}
+.compare-small {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  color: #657087;
+  border: 0;
+  border-top: 1px solid var(--border);
+  padding: 9px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.compare-small:hover,
+.compare-small.selected {
+  background: #fff0f4;
+  color: var(--red);
+}
+.stock {
+  font-weight: 600;
+}
